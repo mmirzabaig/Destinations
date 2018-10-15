@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Destination</h1>
+
+  <%=    destination.name %> </br>
+  <%   if (destination.fly === true ) { %>
+  You can Fly! </br>
+  <%  } else { %>
+  You cant Fly! </br>
+  <%    } %>
+  <%=      destination.climate %> </br>
+  <img src="<%=destination.image%>" alt="">
+
+</body>
+
+</html>

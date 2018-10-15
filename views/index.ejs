@@ -5,7 +5,33 @@
     <title></title>
   </head>
   <body>
-    <h1>HELLO</h1>
+    <h1>My Destinations</h1>
+    <ul>
+  <%  for ( let i = 0; i < destinations.length; i++ ) { %>
+    <li>
+  <%=    destinations[i].name %> </br>
+  <%   if (destinations[i].fly === true ) { %>
+  You can Fly! </br>
+  <%  } else { %>
+  You cant Fly! </br>
+  <%    } %>
+  <%=      destinations[i].climate %> </br>
+  <img src="<%=destinations[i].image%>" alt="">  </br>
+</li>
+<form action="/destinations/<%=destinations[i].id%>" method="GET">
+  <input type="submit" name="" value="View Destination">
+</form>
+<form action="/destinations/<%=destinations[i].id%>?_method=DELETE" method="POST">
+  <input type="submit" name="" value="Remove Destination">
+</form>
+<form action="destinations/<%=destinations[i].id%>/edit" method="GET">
+  <input type="submit" name="" value="Edit Destination">
+</form>
+<%  } %>
+</ul>
+<form class="" action="destinations/new" method="get">
+  <input type="submit" name="" value="Add A New Destination">
+</form>
 
   </body>
 </html>

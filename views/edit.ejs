@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>EDIT</h1>
+  <form method="POST" action="/destinations/<%=destination.id%>?_method=PUT">
+
+    Name: <input type="text" name="name" value=""> </br>
+    Fly: <input type="checkbox" name="fly" value=""> </br>
+    Climate: <input type="text" name="climate" value=""> </br>
+    Image: <input type="text" name="image" value=""> </br>
+    <input type="submit" name="" value="Submit">
+  </form>
+</body>
+
+</html>

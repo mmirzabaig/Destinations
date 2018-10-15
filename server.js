@@ -15,9 +15,6 @@ app.use('/destinations', destinationsController);
 
 
 
-
-
-
 app.listen(3000, () => {
   console.log('Your APP IS LIVE!');
 })
